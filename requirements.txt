@@ -1,0 +1,4 @@
+openai-whisper>=20240930
+openai>=1.50.0,<2
+streamlit>=1.38.0,<2
+pytest>=8.0.0,<9
