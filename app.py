@@ -181,6 +181,74 @@ h3 {font-size: 1.5rem !important;}
 [data-testid="stMetricValue"], [data-testid="stMetricValue"] div
     {font-size: 2rem !important; font-weight: 700; justify-content: center;
      white-space: normal !important; overflow: visible !important; text-overflow: clip !important; line-height: 1.2;}
+
+/* visual refresh */
+[data-testid="stAppViewContainer"] {
+    background:
+        radial-gradient(circle at 8% 0%, rgba(99, 102, 241, .14), transparent 28rem),
+        radial-gradient(circle at 100% 18%, rgba(14, 165, 233, .10), transparent 26rem);
+}
+[data-testid="stHeader"] {background: transparent;}
+.block-container {max-width: 1440px; padding: 3.5rem 3rem 5rem;}
+h1 {font-size: clamp(2.2rem, 4vw, 3.5rem) !important; letter-spacing: -0.045em; margin-bottom: .35rem !important;}
+h2 {letter-spacing: -0.025em;}
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border: 1px solid rgba(148, 163, 184, .23) !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, .035);
+    box-shadow: 0 14px 40px rgba(15, 23, 42, .08);
+}
+[data-testid="stMetric"] {
+    background: linear-gradient(145deg, rgba(99, 102, 241, .13), rgba(14, 165, 233, .07));
+    border: 1px solid rgba(129, 140, 248, .28);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, .08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+[data-testid="stMetric"]:hover {transform: translateY(-3px); box-shadow: 0 16px 34px rgba(15, 23, 42, .14);}
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] p
+    {font-size: .82rem !important; letter-spacing: .09em;}
+[data-testid="stFileUploaderDropzone"] {
+    border: 1.5px dashed rgba(99, 102, 241, .55);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, .10), rgba(14, 165, 233, .05));
+    transition: border-color .2s ease, background .2s ease;
+}
+[data-testid="stFileUploaderDropzone"]:hover {border-color: #818cf8; background: rgba(99, 102, 241, .16);}
+.stButton button, .stDownloadButton button {
+    border-radius: 11px !important;
+    font-weight: 650 !important;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.stButton button:hover, .stDownloadButton button:hover
+    {transform: translateY(-2px); box-shadow: 0 8px 20px rgba(99, 102, 241, .20);}
+[data-testid="stProgressBar"] > div > div {background: linear-gradient(90deg, #6366f1, #06b6d4);}
+[data-testid="stExpander"] {border: 1px solid rgba(148, 163, 184, .22) !important; border-radius: 14px !important;}
+[data-baseweb="tab-list"] {gap: .35rem; border-bottom: 1px solid rgba(148, 163, 184, .2); padding-bottom: .3rem;}
+button[data-baseweb="tab"] {padding: .8rem 1rem !important; border-radius: 10px 10px 0 0;}
+button[data-baseweb="tab"] *, [data-baseweb="tab-list"] button p
+    {font-size: 1.04rem !important; font-weight: 650 !important;}
+button[data-baseweb="tab"]:hover {background: rgba(99, 102, 241, .10);}
+[data-baseweb="tab-highlight"] {background: linear-gradient(90deg, #6366f1, #06b6d4) !important;}
+.chip {
+    display: inline-flex; align-items: center; padding: 4px 12px; margin: 0 6px 6px 0;
+    border-radius: 999px; font-weight: 600; border-color: rgba(148, 163, 184, .3);
+}
+.chip-green {color: #22c55e; background: rgba(34, 197, 94, .13); border-color: rgba(34, 197, 94, .4);}
+.chip-amber {color: #f59e0b; background: rgba(245, 158, 11, .13); border-color: rgba(245, 158, 11, .4);}
+.chip-red {color: #f87171; background: rgba(248, 113, 113, .13); border-color: rgba(248, 113, 113, .4);}
+[data-testid="stDataFrame"] {border: 1px solid rgba(148, 163, 184, .22); border-radius: 12px; overflow: hidden;}
+[data-testid="stTextArea"] textarea {border-radius: 12px !important; line-height: 1.6 !important;}
+[data-testid="stSidebar"] {
+    border-right: 1px solid rgba(148, 163, 184, .18);
+    background: linear-gradient(180deg, rgba(99, 102, 241, .08), rgba(14, 165, 233, .025) 55%, transparent);
+}
+@media (max-width: 900px) {
+    .block-container {padding: 2.5rem 1.2rem 4rem;}
+    h1 {font-size: 2.35rem !important;}
+    [data-baseweb="tab-list"] {overflow-x: auto; flex-wrap: nowrap;}
+    button[data-baseweb="tab"] {white-space: nowrap; padding: .7rem .8rem !important;}
+}
 </style>
 """
 
