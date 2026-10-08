@@ -1,0 +1,9 @@
+# Stage 1: speech-to-text (runs locally). Needs the ffmpeg binary on PATH (not a pip package).
+# GPU use needs an NVIDIA driver plus the CUDA 12 / cuDNN 9 runtime libraries that your
+# installed CTranslate2 build expects; without them the app falls back to CPU (small.en, int8).
+faster-whisper>=1.1.0
+python-dotenv>=1.0.0
+pydantic>=2.5
+groq>=0.9.0
+google-genai>=1.0.0
+streamlit>=1.40.0   # also installs pandas, used for the action-items table

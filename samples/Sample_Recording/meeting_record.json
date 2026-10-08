@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "source_file": "Sample_Recording.mp4",
+    "generated_at": "2026-10-08T12:35:25+00:00",
+    "audio_duration_seconds": 258.5,
+    "models": {
+      "speech_to_text": "faster-whisper large-v3-turbo (cuda, float16)",
+      "refinement": "openai/gpt-oss-120b (Groq)",
+      "documentation": "gemini-3.1-flash-lite (Gemini)"
+    },
+    "corrections": {
+      "applied": 4,
+      "rejected": 0
+    },
+    "warnings": []
+  },
+  "summary": "The team reviewed project performance, confirming the FP16 model and setting a P95 latency alert threshold of 140ms. Several operational decisions were finalized, including capping cloud spend at $4,500 and rejecting both a Kafka migration and a cloud provider switch for this quarter. Action items were assigned for testing, reporting, and demo preparation, with the customer demo confirmed for October 15th.",
+  "minutes": [
+    {
+      "title": "Model Performance",
+      "points": [
+        "P95 latency is 120ms, meeting the 150ms SLA.",
+        "INT8 quantization is rejected for this release; the team will continue using the FP16 model.",
+        "LoRA fine-tuning for accented speech is deferred until the next WER report."
+      ]
+    },
+    {
+      "title": "Deployment",
+      "points": [
+        "The inference service is running on Kubernetes with Terraform and QuebecTel.",
+        "The team agreed on a 140ms P95 alert threshold for Prometheus.",
+        "Kafka migration is rejected for this quarter.",
+        "CI/CD rollback functionality will be added pending successful load testing."
+      ]
+    },
+    {
+      "title": "Budget and Demo",
+      "points": [
+        "Cloud spend is capped at $4,500 for the quarter.",
+        "Switching cloud providers is rejected due to migration risk.",
+        "The customer demo is confirmed for October 15th."
+      ]
+    }
+  ],
+  "key_decisions": [
+    {
+      "decision": "Do not use INT8 quantization in this release.",
+      "context": null,
+      "evidence": [
+        "No int8 in this release."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "decision": "Set the Prometheus alert threshold to 140ms at P95.",
+      "context": null,
+      "evidence": [
+        "The alert threshold is 140 milliseconds at P95."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "decision": "Do not migrate the event queue to Kafka this quarter.",
+      "context": null,
+      "evidence": [
+        "We are not migrating to Kafka this quarter."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "decision": "Cap cloud spend at $4,500 for the quarter.",
+      "context": null,
+      "evidence": [
+        "Cloud Spend stays capped at $4,500."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "decision": "Do not switch cloud providers.",
+      "context": null,
+      "evidence": [
+        "Nope. That is not approved."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "decision": "The customer demo is scheduled for October 15th.",
+      "context": null,
+      "evidence": [
+        "The demo is October 15th."
+      ],
+      "evidence_verified": true
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Put together a proper accented speech test set",
+      "owner": "Kabir",
+      "deadline": "unspecified",
+      "status": "confirmed",
+      "condition": null,
+      "evidence": [
+        "Kabir, can you put together a proper accented speech test set? Yes, I'll take that."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Send the latency report to Laura",
+      "owner": "Arjun",
+      "deadline": "Thursday",
+      "status": "confirmed",
+      "condition": null,
+      "evidence": [
+        "Arjun, can you send her the latency report? Sure. I will send it by Thursday."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Add rollback functionality to CI/CD pipeline",
+      "owner": "Manav",
+      "deadline": "unspecified",
+      "status": "conditional",
+      "condition": "Only if the load test passes.",
+      "evidence": [
+        "I will add it, but only if the load test passes."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Run the load test",
+      "owner": "Manav",
+      "deadline": "Wednesday",
+      "status": "confirmed",
+      "condition": "Arjun's export needs to land first.",
+      "evidence": [
+        "Make it Wednesday. Arjun's export needs to land first, but Wednesday works."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Configure the Prometheus alert rule",
+      "owner": "Manav",
+      "deadline": "unspecified",
+      "status": "confirmed",
+      "condition": null,
+      "evidence": [
+        "I will configure the Prometheus alert rule."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Update the runbook for the new Grafana dashboards",
+      "owner": "unspecified",
+      "deadline": "unspecified",
+      "status": "unassigned",
+      "condition": null,
+      "evidence": [
+        "Someone should also update the runbook for the new Grafana dashboards."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Prepare the demo slides",
+      "owner": "Arjun",
+      "deadline": "October 12th",
+      "status": "confirmed",
+      "condition": null,
+      "evidence": [
+        "Arjun, please prepare the demo slides by October 12th. Okay. Will do."
+      ],
+      "evidence_verified": true
+    },
+    {
+      "task": "Finalize the demo script",
+      "owner": "unspecified",
+      "deadline": "October 10th",
+      "status": "unassigned",
+      "condition": null,
+      "evidence": [
+        "And somebody needs to finalize the demo script by October 10th."
+      ],
+      "evidence_verified": true
+    }
+  ]
+}
